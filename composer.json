@@ -1,0 +1,29 @@
+{
+  "name": "molecular/molecular-cache",
+  "description": "Cache of the Molecular Framework",
+  "keywords": [
+    "core",
+    "molecular",
+	"framework"
+  ],
+  "license": "MIT",
+  "authors": [
+    {
+      "name": "Antonio Henrique Lorenzon dos Santos",
+      "email": "antoniohlsantos@gmail.com"
+    }
+  ],
+  "require": {
+    "php": ">=5.4.0",
+    "ext-mbstring": "*",
+     "molecular/molecularcore": ">=0.1.0"
+  },
+  "require-dev": {
+    "phpunit/phpunit": "~4.0"
+  },
+  "autoload": {
+    "psr-4": {
+      "MolecularCache\\": "src/MolecularCache"
+    }
+  }
+}
