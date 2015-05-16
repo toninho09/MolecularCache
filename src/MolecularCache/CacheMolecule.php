@@ -20,7 +20,7 @@
 			return self::getInstance();
 		}
 		
-		public function register(\MolecularCore\Core &$app){
+		public function register(\MolecularCore\Core &$app = null){
 			if (!isset(self::$instance)) {
 				if(isset($app->config['cache']['type'])) 
 					$this->class = $this->getCacheClass($app->config['cache']['type']);
