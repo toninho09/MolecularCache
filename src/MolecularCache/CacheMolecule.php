@@ -22,8 +22,8 @@
 		
 		public function register(\MolecularCore\Core &$app = null){
 			if (!isset(self::$instance)) {
-				if(isset($app->config['cache']['type'])) 
-					$this->class = $this->getCacheClass($app->config['cache']['type']);
+				if(!is_null($app->getConfig('cache.type'))) 
+					$this->class = $this->getCacheClass($app->getConfig('cache.type'));
 	            self::$instance = new $this->class();
 	        }
 		}
@@ -42,8 +42,7 @@
 					break;
 				
 				default:
-					throw new Exception("Cache Type not Found.", 1);
-					
+					throw new \Exception("Cache Type not Found.", 1);
 					break;
 			}
 		}

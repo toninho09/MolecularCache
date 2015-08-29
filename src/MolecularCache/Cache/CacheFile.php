@@ -126,10 +126,6 @@ class CacheFile implements \MolecularCache\Interfaces\CacheInterface{
 	    }
 	}
 
-	public function group($key){
-		return false;
-	}
-
 	/**
 	 * create the file used to storage the cache
 	 * @param  string $key     the key value

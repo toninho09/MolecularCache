@@ -7,5 +7,4 @@ Interface CacheInterface{
 	function has($key);
 	function forever($key,$content);
 	function forget($key);
-	function group($key);
 }
